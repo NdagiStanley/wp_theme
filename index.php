@@ -14,8 +14,32 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<?php
+$blog_img = get_template_directory_uri() . '/assets/img/data.jpg';
+$blog_text = 'Blog'
+  
+?>
+ <div class="blog header" style="background-image: url('<?php echo $blog_img;?>'); height: 30vh;">
+    <div class="container" style="padding-top: 8vh;">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2" align="center">
+            <?php if ($blog_text) : ?>
+
+            <h1> <?php echo $blog_text; ?> </h1>
+             
+            <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="main main-raised">
+  <div class="section">
+
+  <!--<div class="container">-->
+    <div id="content" class="row">
+    	<div id="primary" class="col-md-8 col-md-offset-2">
+    		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) :
@@ -27,9 +51,14 @@ get_header(); ?>
 
 			<?php
 			endif;
+			get_sidebar();
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+			?>
+				<div>
+			<?php
+
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -38,9 +67,13 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
+			?>
+				</div>
+				<br>
+			<?php
 			endwhile;
 
-			the_posts_navigation();
+			// the_posts_navigation();
 
 		else :
 
@@ -51,6 +84,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	</div>
+      </div>
+      <!--</div>-->
+      </div>
+
 <?php
-get_sidebar();
 get_footer();

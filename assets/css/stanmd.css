@@ -1,3 +1,8 @@
+p {
+    font-size: larger;
+    line-height: 2em;
+}
+
 .btn.btn-simple  {
     margin-top: 150px;
     
