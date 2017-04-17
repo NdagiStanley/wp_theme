@@ -105,7 +105,9 @@ add_action( 'widgets_init', 'stanmd_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stanmd_scripts() {
-	wp_enqueue_style( 'stanmd-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'stanmd', get_template_directory_uri() . '/assets/css/stanmd.css');
+	wp_enqueue_style( 'bootstrap.min', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+	wp_enqueue_style( 'material-kit', get_template_directory_uri() . '/assets/css/material-kit.css');
 
 	wp_enqueue_script( 'stanmd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

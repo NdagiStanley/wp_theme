@@ -9,14 +9,31 @@
  * @package stanmd
  */
 
-?><!DOCTYPE html>
+?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="description" content="Web profile for Stan_MD">
+	<meta name="author" content="Stanley Ndagi">
+	<meta name="keywords" content="stanmd, Ndagi, Stanley, Ndagi Stanley, web profile, material design, Tech Kenyans, Global Tech Leader, Andela, developer, software, engineer">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+
+	<title>Stan_MD</title>
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<!-- Fonts and icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/md.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/md.png">
+
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
