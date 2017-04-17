@@ -36,7 +36,6 @@ $blog_text = 'Blog'
 <div class="main main-raised">
   <div class="section">
 
-  <!--<div class="container">-->
     <div id="content" class="row">
     	<div id="primary" class="col-md-8 col-md-offset-2">
     		<main id="main" class="site-main" role="main">
@@ -86,8 +85,8 @@ $blog_text = 'Blog'
 
 	</div>
       </div>
-      <!--</div>-->
       </div>
+
 
 <?php
 get_footer();

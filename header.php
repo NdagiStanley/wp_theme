@@ -55,7 +55,7 @@
 				  TO GOD BE THE GLORY
 				</a>
 				<?php else : ?>
-				<a class="navbar-brand page-scroll" href="#page-top">
+				<a class="navbar-brand page-scroll" href="/blog">
 				  Stan_MD
 				</a>
 				<?php
