@@ -170,9 +170,9 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'assets/img/map-marker.png';
-    var here = 'assets/img/bluedot.png';
-    var pin = 'assets/img/pin.png';
+    var image = 'wp-content/themes/stanmd/assets/img/map-marker.png';
+    var here = 'wp-content/themes/stanmd/assets/img/bluedot.png';
+    var pin = 'wp-content/themes/stanmd/assets/img/pin.png';
     var home = new google.maps.LatLng(0.5067, 37.9000);
     var lagos_location = new google.maps.LatLng(2.365422, 3.406448);
     var ny_location = new google.maps.LatLng(40.730610, -73.935242);

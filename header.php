@@ -9,7 +9,11 @@
  * @package stanmd
  */
 
-?><!doctype html>
+?>
+<?php
+ $favicon_img = get_template_directory_uri() . '/assets/img/md.png';
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 
@@ -30,37 +34,89 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/md.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/md.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $favicon_img;?>">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $favicon_img;?>">
 
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="landing-page">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<?php
+				if ( is_front_page() ) : ?>
+				<a class="navbar-brand page-scroll" href="#page-top">
+				  TO GOD BE THE GLORY
+				</a>
+				<?php else : ?>
+				<a class="navbar-brand page-scroll" href="#page-top">
+				  Stan_MD
+				</a>
+				<?php
+				endif; ?>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+        		</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navigation-example">
+				<ul class="nav navbar-nav navbar-right">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<?php
+					if ( is_front_page() ) : ?>
+					<li>
+						<a class="page-scroll" href="#about_this_young_man">About</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#so_far_so_good">So far, so good</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#contact">Contact</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#locate"><abbr title="Silicon Savannah and others">the 254 et al</abbr></a>
+					</li>
+					<li>
+						<a href="/blog" target="_blank">
+							<i class="material-icons">edit</i>BLOG</a>
+					</li>
+					<?php else : ?>
+					<li>
+						<a href="/">
+							<i class="material-icons">home</i>HOME</a>
+					</li>
+					<?php
+					endif; ?>
+					<li>
+						<a href="https://twitter.com/NdagiStanley" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/NdagiStanley" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+							<i class="fa fa-facebook-square"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.github.com/NdagiStanley" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+							<i class="fa fa-github"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'stanmd' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'stanmd' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

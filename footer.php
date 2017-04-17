@@ -41,7 +41,7 @@
 						</a>
 					</li>
 					<li>
-						<h5> <a href="#">BLOG</a> </h5>
+						<h5> <a href="/blog" target="_blank">BLOG</a> </h5>
 					</li>
 				</ul>
 			</nav </div>
