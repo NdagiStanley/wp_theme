@@ -13,13 +13,39 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'stanmd' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'stanmd' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'stanmd' ), 'stanmd', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="footer">
+		<div class="container">
+			<div class="copyright pull-left">
+				Copyright &copy; <strong> Stan_MD™ <font color="blue">ה</font> </strong>| AD-2017
+			</div>
+			<nav class="pull-right">
+				<ul>
+					<li>
+						<a href="https://twitter.com/NdagiStanley" target="_blank" class="btn btn-white btn-just-icon">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/NdagiStanley" target="_blank" class="btn btn-white btn-just-icon">
+							<i class="fa fa-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.github.com/NdagiStanley" target="_blank" class="btn btn-white btn-just-icon">
+							<i class="fa fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/en/NdagiStanley" target="_blank" class="btn btn-white btn-just-icon">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<h5> <a href="#">BLOG</a> </h5>
+					</li>
+				</ul>
+			</nav </div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
